@@ -1,9 +1,9 @@
 package day01;
 
 public class C01_HelloWorld {
-   // Bir satırlık yorumlar başına iki adet bölü çizgisi(slash) koyarak yapılır
-   // Ben bu java ile programlamayı en iyi şekilde öğreneceğim.
-   // Öğrendikten sonra bununla çalışmalar yapacağım
+    // Bir satırlık yorumlar başına iki adet bölü çizgisi(slash) koyarak yapılır
+    // Ben bu java ile programlamayı en iyi şekilde öğreneceğim.
+    // Öğrendikten sonra bununla çalışmalar yapacağım
 
     /*
     Bu şekilde yapılan yorumlarda
@@ -50,7 +50,6 @@ public class C01_HelloWorld {
 
         System.out.println("Hello World\t\n\"Hello Wise\"");
         System.out.println("deneme");
-
 
 
     }
