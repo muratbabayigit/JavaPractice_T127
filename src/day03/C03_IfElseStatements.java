@@ -60,6 +60,11 @@ public class C03_IfElseStatements {
 
         }
 
+    /*
+    Not: Birden fazla if,elseif, else durumlarında en son adıma bakılır
+    else ile bitiyorsa tüm ihtimaller kapsanır.
+    else if ile bitiyorsa kapsanmayan ihtimaller vardır.
+     */
 
 }
 }
