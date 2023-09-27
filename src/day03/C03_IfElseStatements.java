@@ -66,5 +66,7 @@ public class C03_IfElseStatements {
     else if ile bitiyorsa kapsanmayan ihtimaller vardır.
      */
 
+        //buraya yeni bir satır ekledim
+
 }
 }
