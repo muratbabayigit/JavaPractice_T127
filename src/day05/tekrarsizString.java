@@ -7,7 +7,7 @@ public class tekrarsizString {
         // kelimeyi ve tekrarsiz halini yazdirip
         // kelimede kullanilan farkli harf sayisini yazdırın
          */
-        String input = "Have nice day";
+        String input = "Have nice day!";
         String tekrarsizInput = "";
         String islenecekKelime = input.replaceAll("\\W", ""); //Haveaniceday
         System.out.print(input.substring(0, 1));//H
@@ -25,3 +25,17 @@ public class tekrarsizString {
         System.out.println("tekrarsiz harf sayısı :"+tekrarsizInput.length());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
