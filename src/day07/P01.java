@@ -1,4 +1,4 @@
-package ders07;
+package day07;
 
 public class P01 {
     String isim="Murat"; String soyisim="Babayigit";

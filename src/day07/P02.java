@@ -1,4 +1,4 @@
-package ders07;
+package day07;
 
 public class P02 {
     public static void main(String[] args) {
