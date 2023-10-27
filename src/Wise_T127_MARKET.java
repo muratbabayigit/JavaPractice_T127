@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Wise_T127_MARKET {
@@ -64,11 +66,78 @@ ilk programa girildiginde bizi bir menu karsilasin bu secenekler
     }
 
     private static void fisYazdir() {
-        System.out.println("------- Fiş Yazdırılıyor -------");
+
+        System.out.println("------- WISE T127 Market -------");
+        System.out.println("Alışverişinizde Bizi Tercih Ettiğiniz için \nTeşekkür Ederiz");
+        System.out.println(sepet);
+        System.out.println(" ");
+        System.out.println("Toplam Alışveriş Tutarı: "+toplam);
+        System.out.print("Müşterinin Ödeme Miktarını Giriniz: ");
+        int odeme= scan.nextInt();
+        if (odeme<toplam){
+            System.out.println("Ödeme Yetersiz. Ödemeniz "+(toplam-odeme)+" TL kadar eksiktir. Bu fark borç olarak hesabınıza kaydedilmiştir");
+        }else {
+            System.out.println("Ödenenen Tutar: "+odeme+
+            "\nPara Üstü: "+(odeme-toplam));
+        }
+        LocalDateTime saat= LocalDateTime.now();
+        System.out.println(saat);
+        System.out.println(" İyi Günler Dileriz - Yine Bekleriz");
+        cikis();
+
     }
+
+
 
     private static void market() {
         System.out.println("------- Market Reyonuna Hoşgeldiniz -------");
+        System.out.println("Lütfen Almak istediğiniz ürün kodunu(UK) giriniz");
+        System.out.println("Nutella Fiyatı:109₺ UK:31\nPrinç Fiyatı:40₺ UK:32\nMakarna Fiyatı:12₺ UK:33\nŞampuan Fiyatı:60₺ UK:34\nMercimek Fiyat: 25₺");
+
+        while(!ekUrun){
+            urunKodu= scan.nextInt();
+            if (urunKodu>=31 && urunKodu<=35){
+                System.out.println("Ne kadar alacaksınız?");
+                urunMiktari= scan.nextInt();
+                switch (urunKodu){
+                    case 31:
+                        urunAdi="Nutella";
+                        urunFiyati=109;
+                        System.out.println(urunMiktari+" adet "+urunAdi+"fiyatı: "+(urunMiktari*urunFiyati)+" TL'dir");
+                        break;
+                    case 32:
+                        urunAdi="Prinç";
+                        urunFiyati=40;
+                        System.out.println(urunMiktari+" adet "+urunAdi+"fiyatı: "+(urunMiktari*urunFiyati)+" TL'dir");
+                        break;
+                    case 33:
+                        urunAdi="Makarna";
+                        urunFiyati=12;
+                        System.out.println(urunMiktari+" adet "+urunAdi+"fiyatı: "+(urunMiktari*urunFiyati)+" TL'dir");
+                        break;
+                    case 34:
+                        urunAdi="Şampuan";
+                        urunFiyati=60;
+                        System.out.println(urunMiktari+" adet "+urunAdi+"fiyatı: "+(urunMiktari*urunFiyati)+" TL'dir");
+                        break;
+                    case 35:
+                        urunAdi="Mercimek";
+                        urunFiyati=25;
+                        System.out.println(urunMiktari+" adet "+urunAdi+"fiyatı: "+(urunMiktari*urunFiyati)+" TL'dir");
+                        break;
+                }
+                urunFiyati=urunFiyati*urunMiktari;
+                toplam+=urunFiyati;
+                System.out.println("Oluşan Sepet Tutarı:"+toplam);
+                sepet+=urunAdi+":"+urunFiyati+" TL\n";
+                System.out.println("Başka bir ürün almak isterseniz ürün kodunu(UK) giriniz.\nAna Menüye dönmek için 0 tuşuna basınız");
+
+
+            } else if (urunKodu==0) {
+                girisEkrani();
+            }
+        }
+
     }
 
     private static void sarkuteri() {
@@ -111,7 +180,7 @@ ilk programa girildiginde bizi bir menu karsilasin bu secenekler
                 urunFiyati=urunMiktari*urunFiyati;
                 toplam+=urunFiyati;
                 System.out.println("Oluşan Spet Tutarı: "+toplam);
-                sepet+=urunAdi+" fiyatı:"+urunFiyati+"₺";
+                sepet+=urunAdi+" fiyatı:"+urunFiyati+"₺\n";
                 System.out.println("Başka bir ürün almak isterseniz lütfen kodunu giriniz.\n Ana Menüye dönmek için 0 tuşuna basınız");
             }else if(urunKodu==0){
                 girisEkrani();
