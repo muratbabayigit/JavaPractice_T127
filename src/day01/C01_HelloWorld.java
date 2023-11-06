@@ -38,6 +38,7 @@ public class C01_HelloWorld {
        \"   :" yazar
        \'   :' yazar
        \\   : \ yazar
+       \\W  : harf dışındaki herşey
          */
         System.out.println("=========================================");
         System.out.println("Hello World\nHello Wise");
